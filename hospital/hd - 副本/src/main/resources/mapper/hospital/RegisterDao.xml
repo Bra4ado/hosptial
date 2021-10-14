@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.hospital.dao.RegisterDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.hospital.entity.RegisterEntity" id="registerMap">
+        <result property="rno" column="rno"/>
+        <result property="name" column="name"/>
+        <result property="idCard" column="id_card"/>
+        <result property="siNumber" column="si_number"/>
+        <result property="registerMoney" column="register_money"/>
+        <result property="phone" column="phone"/>
+        <result property="isPay" column="is_pay"/>
+        <result property="sex" column="sex"/>
+        <result property="age" column="age"/>
+        <result property="job" column="job"/>
+        <result property="consultation" column="consultation"/>
+        <result property="department" column="department"/>
+        <result property="did" column="did"/>
+        <result property="status" column="status"/>
+        <result property="remark" column="remark"/>
+        <result property="registerDate" column="register_date"/>
+    </resultMap>
+
+
+</mapper>

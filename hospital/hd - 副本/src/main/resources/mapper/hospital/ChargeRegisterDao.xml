@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.hospital.dao.ChargeRegisterDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.hospital.entity.ChargeRegisterEntity" id="chargeRegisterMap">
+        <result property="crId" column="cr_id"/>
+        <result property="rno" column="rno"/>
+        <result property="cid" column="cid"/>
+        <result property="chargePrice" column="charge_price"/>
+        <result property="chargeDate" column="charge_date"/>
+    </resultMap>
+
+
+</mapper>

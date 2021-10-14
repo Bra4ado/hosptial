@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.hospital.dao.DeptDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.hospital.entity.DeptEntity" id="deptMap">
+        <result property="deptid" column="deptid"/>
+        <result property="deptname" column="deptname"/>
+        <result property="state" column="state"/>
+    </resultMap>
+    <select id="findById" resultType="io.renren.modules.hospital.entity.DeptEntity">
+        select * from dept where deptid=#{deptid}
+    </select>
+
+
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.hospital.dao.UsersDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.hospital.entity.UsersEntity" id="usersMap">
+        <result property="userid" column="userid"/>
+        <association property="role" column="roleid" javaType="io.renren.modules.hospital.entity.RoleEntity"
+                     select="io.renren.modules.hospital.dao.RoleDao.findById"></association>
+</resultMap>
+
+
+    <select id="findDoctorAndDepartment" resultMap="usersMap">
+        select * from users
+    </select>
+</mapper>
